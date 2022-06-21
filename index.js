@@ -3,7 +3,7 @@ const buttonClear = document.querySelector(".clear");
 const city = document.querySelector("#city");
 const app = document.querySelector(".weather--app");
 
-//________________________________________________________________________
+//______________________________CurrentDays
 
 const fetchWeather = async (city) => {
   try {
@@ -156,7 +156,7 @@ const fetchGraph = async (city) => {
         return day.toDateString();
       };
 
-      //_____________________________________
+      //____________________________MyGraph
 
       let chartStatus = Chart.getChart("myChart");
       if (chartStatus != undefined) {
