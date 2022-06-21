@@ -224,7 +224,7 @@ import { randomPicturesOnLoad } from "./modules/randomPicturesOnLoad.js";
 
 //________________________________________________________________________________________________ EVENTS
 
-const CItyAsk = localStorage.getItem("LastCityAsk");
+const CityAsk = localStorage.getItem("LastCityAsk");
 
 buttonSubmit.addEventListener("click", () => {
   randomPictures();
@@ -251,7 +251,7 @@ buttonClear.addEventListener("click", () => {
 });
 
 window.addEventListener("load", () => {
-  if (CItyAsk) {
+  if (CityAsk) {
     randomPicturesOnLoad(localStorage.LastCityAsk);
     fetchWeather(localStorage.LastCityAsk);
     fetchWeatherFallowingDays(localStorage.LastCityAsk);
