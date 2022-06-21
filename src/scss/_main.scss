@@ -1,0 +1,177 @@
+* {
+  font-family: "Antic Slab", serif;
+  body {
+    background-image: linear-gradient(
+      to right top,
+      #4169a6,
+      #008dc1,
+      #00adb2,
+      #00c580,
+      #a7d345
+    );
+    background-attachment: fixed;
+    main {
+      width: 60%;
+      margin: auto;
+      padding: 50px;
+
+      @media screen and (max-width: 720px) {
+        width: 80%;
+      }
+
+      @media screen and (max-width: 430px) {
+        width: 70%;
+      }
+
+      h1 {
+        margin-top: 50px;
+        margin-bottom: 100px;
+        text-transform: uppercase;
+        text-align: center;
+        color: $white;
+      }
+
+      .weather--app {
+        text-align: center;
+
+        .note {
+          color: $darkBlue;
+        }
+
+        input {
+          width: 300px;
+          height: 30px;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          background-color: $lightGrey;
+          text-align: center;
+          border: none;
+          box-shadow: 0px 0px 12px 0px $lightBlue;
+
+          @media screen and (max-width: 430px) {
+            width: 70%;
+          }
+
+          &:focus {
+            outline: none;
+            border: 1px solid $lightBlue;
+          }
+        }
+
+        .submit {
+          height: 30px;
+          width: 30px;
+          background-color: $green;
+          border: none;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $lightGreen;
+          }
+        }
+
+        .clear {
+          height: 30px;
+          width: 100px;
+          text-transform: uppercase;
+          border-radius: 15px;
+          background-color: $lightGrey;
+          border-color: $lightGrey;
+          font-weight: bold;
+          cursor: pointer;
+          margin-bottom: 30px;
+          letter-spacing: 2px;
+          box-shadow: 0 0 12px 0px $lightGrey;
+
+          &:hover {
+            background-color: $lightBlue;
+            border-color: $lightBlue;
+            box-shadow: 0 0 12px 0px $lightBlue;
+            transition: 0.5s;
+          }
+        }
+
+        .containerPictures {
+          width: 80%;
+          margin: auto;
+          margin-bottom: 50px;
+          img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 4px solid $backgroundColorTransp;
+          }
+        }
+
+        .day_one {
+          margin: auto;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          border-radius: 15px;
+          background-color: $backgroundColorTransp;
+          display: flex;
+          flex-flow: wrap;
+          justify-content: space-around;
+          align-items: center;
+          gap: 50px;
+          margin-bottom: 50px;
+          padding: 5px;
+
+          .city_data {
+            .date {
+              color: $darkBlue;
+              font-weight: bold;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+            }
+
+            h2 {
+              font-size: xx-large;
+            }
+          }
+
+          .temp_data {
+            img {
+              width: 100px;
+            }
+
+            .description {
+              color: $darkBlue;
+              font-size: large;
+            }
+
+            .temp {
+              font-weight: bold;
+              font-size: x-large;
+            }
+          }
+        }
+
+        .container_fallowing_days {
+          display: flex;
+          flex-flow: wrap;
+          justify-content: space-around;
+          gap: 30px;
+          margin-bottom: 50px;
+
+          .fallowing_days {
+            border-radius: 15px;
+            background-color: $backgroundColorTransp;
+            width: 230px;
+          }
+        }
+      }
+
+      .graph {
+        padding-bottom: 50px;
+        width: 500px;
+        margin: auto;
+
+        @media screen and (max-width: 600px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

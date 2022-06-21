@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather-App</title>
+    <link rel="stylesheet" href="./src/css/style.min.css" />
+    <script
+      src="https://kit.fontawesome.com/4ec5d12ad6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+
+    <script type="module" src="./index.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Wanna know the weather?</h1>
+
+      <section class="weather--app">
+        <p class="note">
+          NB: For better results, use the country ID (ex: San Juan, PR)
+        </p>
+
+        <input type="text" id="city" placeholder="search for a city..." />
+        <button class="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <br />
+        <button class="clear">clear</button>
+      </section>
+
+      <div class="graph">
+        <canvas id="myChart"></canvas>
+      </div>
+    </main>
+  </body>
+</html>
