@@ -1,6 +1,6 @@
 module.exports = {
   //...
-  watch: true,
+  //watch: true,
 
   watchOptions: {
     aggregateTimeout: 600,
