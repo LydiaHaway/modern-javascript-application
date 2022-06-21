@@ -257,9 +257,9 @@ window.addEventListener("load", () => {
     fetchWeatherFallowingDays(localStorage.LastCityAsk);
     fetchGraph(localStorage.LastCityAsk);
   } else {
-    randomPictures("san sebastian, PR");
-    fetchWeather("san sebastian, PR");
-    fetchWeatherFallowingDays("san sebastian, PR");
-    fetchGraph("san sebastian, PR");
+    randomPictures("san juan, PR");
+    fetchWeather("san juan, PR");
+    fetchWeatherFallowingDays("san juan, PR");
+    fetchGraph("san juan, PR");
   }
 });
