@@ -3,7 +3,7 @@ const buttonClear = document.querySelector(".clear");
 const city = document.querySelector("#city");
 const app = document.querySelector(".weather--app");
 
-//______________________________CurrentDays
+//__________________________________________________________________________________________CurrentDays
 
 const fetchWeather = async (city) => {
   try {
@@ -86,7 +86,7 @@ const fetchWeather = async (city) => {
   }
 };
 
-//________________________________________________________FallowingDays
+//_____________________________________________________________________________________FallowingDays
 
 const fetchWeatherFallowingDays = async (city) => {
   try {
@@ -98,7 +98,7 @@ const fetchWeatherFallowingDays = async (city) => {
       app.appendChild(fallowing_day);
       fallowing_day.setAttribute("class", "container_fallowing_days");
 
-      //________Function
+      //_____________________________________________________________________________________Function
 
       let fallowingDaysWeatherDisplay = (e) => {
         const day = document.createElement("div");
@@ -127,7 +127,7 @@ const fetchWeatherFallowingDays = async (city) => {
         temp.textContent = Math.floor(data.list[e].main.temp) + "°C";
       };
 
-      //____________Days
+      //_________________________________________________________________________________________Days
 
       fallowingDaysWeatherDisplay(7);
       fallowingDaysWeatherDisplay(15);
@@ -139,7 +139,7 @@ const fetchWeatherFallowingDays = async (city) => {
   }
 };
 
-//________________________________________________________GRAPH
+//________________________________________________________________________________________________GRAPH
 
 const fetchGraph = async (city) => {
   try {
@@ -147,7 +147,7 @@ const fetchGraph = async (city) => {
       `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=25a1023256bf6e806f82892c9dd8fe40`
     );
     await res.json().then((data) => {
-      //_____________________________________Function
+      //__________________________________________________________________________________________Function
 
       let GetDate = (e) => {
         const date = data.list[0].dt;
@@ -156,7 +156,7 @@ const fetchGraph = async (city) => {
         return day.toDateString();
       };
 
-      //____________________________MyGraph
+      //__________________________________________________________________________________________MyGraph
 
       let chartStatus = Chart.getChart("myChart");
       if (chartStatus != undefined) {
