@@ -158,7 +158,6 @@ const fetchGraph = async (city) => {
 
       //__________________________________________________________________________________________MyGraph
 
-      let Chart;
       let chartStatus = Chart.getChart("myChart");
       if (chartStatus != undefined) {
         chartStatus.destroy();
