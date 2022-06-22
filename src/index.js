@@ -150,7 +150,7 @@ const fetchGraph = async (city) => {
       //__________________________________________________________________________________________Function
 
       let GetDate = (e) => {
-        const date = data.list[0].dt;
+        const date = data.list[e].dt;
         const day = new Date(date * 1000);
 
         return day.toDateString();
@@ -158,12 +158,14 @@ const fetchGraph = async (city) => {
 
       //__________________________________________________________________________________________MyGraph
 
+      let Chart;
       let chartStatus = Chart.getChart("myChart");
       if (chartStatus != undefined) {
         chartStatus.destroy();
       }
 
       const ctx = document.getElementById("myChart").getContext("2d");
+
       const myChart = new Chart(ctx, {
         type: "line",
         data: {
