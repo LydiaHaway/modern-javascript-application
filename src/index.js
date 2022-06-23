@@ -1,3 +1,7 @@
+
+
+//_________________________________________________________________________________________Const
+
 const buttonSubmit = document.querySelector(".submit");
 const buttonClear = document.querySelector(".clear");
 const city = document.querySelector("#city");
@@ -157,6 +161,7 @@ const fetchGraph = async (city) => {
       };
 
       //__________________________________________________________________________________________MyGraph
+
 
       let chartStatus = Chart.getChart("myChart");
       if (chartStatus != undefined) {
