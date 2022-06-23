@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'development',
   watch: true, 
   module: {
     rules: [
@@ -16,7 +17,9 @@ module.exports = {
         ],
       },
     ],
-  },
+
+  }, 
+
 };
 
 // npm run dev
