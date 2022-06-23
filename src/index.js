@@ -1,5 +1,4 @@
-
-
+import "./scss/style.scss"
 //_________________________________________________________________________________________Const
 
 const buttonSubmit = document.querySelector(".submit");
